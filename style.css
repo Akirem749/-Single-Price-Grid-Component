@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root{
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+}
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Karla', sans-serif;
+    background-color: var(--Light-Gray);
+
+}
+main{
+    margin: 50px auto;
+    max-width: 700px;
+    display: grid;
+    grid-template-columns:repeat(2, 1fr) ;
+    grid-template-areas: 
+    "section-1 section-1"
+    "section-2 section-3";
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.13);
+    
+}
+h2{
+    color: var(--Cyan);
+}
+
+section:nth-of-type(1){
+    grid-area: section-1;
+    padding: 30px;
+    background-color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+section:nth-of-type(1) h4{
+    color: var(--Bright-Yellow);
+    margin-bottom: 0;
+    margin-bottom: 7px;
+}
+section:nth-of-type(1) p{
+    color: var(--Grayish-Blue);
+    margin-top: 0;
+}
+section:nth-of-type(2){
+    grid-area: section-2;
+    padding: 30px;
+    background-color: var(--Cyan);
+    border-bottom-left-radius: 5px;
+    
+
+}
+section:nth-of-type(3){
+    grid-area: section-3;
+    padding: 30px;
+    background-color: hsla(179, 62%, 43%, 0.623);
+    border-bottom-right-radius: 5px;
+}
+section:nth-of-type(3) p{
+    margin: 0;
+    margin-bottom: 5px;
+    color: var(--Light-Gray);
+}
+section:nth-of-type(3) h4,
+section:nth-of-type(2) h4{
+    margin: 0;
+    margin-bottom: 15px;
+    color: white;
+}
+
+#price{
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    margin-right: 10px;
+    
+}
+#period{
+    color: var(--Light-Gray);
+    
+}
+#daily-price{
+    color: white;
+}
+button{
+    width: 240px;
+    padding: 15px 0px;
+    border-radius: 5px;
+    border: 0;
+    color: white;
+    background-color: var(--Bright-Yellow);
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    main{
+        all: unset;
+        margin: 50px auto;
+        max-width: 320px;
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-areas: 
+        "section-1"
+        "section-2"
+        "section-3";
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.13);
+        
+    }
+    section:nth-of-type(2){
+        all: unset;
+        grid-area: section-2;
+        padding: 30px;
+        background-color: var(--Cyan);
+        
+        
+    
+    }
+    section:nth-of-type(3){
+        all: unset;
+        grid-area: section-3;
+        padding: 30px;
+        background-color: hsla(179, 62%, 43%, 0.623);
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+}
